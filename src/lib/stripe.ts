@@ -5,7 +5,7 @@ let stripePromise: Promise<Stripe | null>;
 
 export const getStripe = () => {
   if (!stripePromise) {
-    const publishableKey = 'pk_test_51QRbXkP5dVPvHYxNDhJZqMgkZJqMgkZJqMgkZJqMgkZJqMgkZJqMgkZ';
+    const publishableKey = import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || '';
     stripePromise = loadStripe(publishableKey);
   }
   return stripePromise;
