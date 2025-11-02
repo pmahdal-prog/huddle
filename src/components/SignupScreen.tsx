@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card } from '@/components/ui/card';
-import { auth, isFirebaseConfigured } from '@/lib/firebase';
+import { auth} from '@/lib/firebase';
 import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { toast } from '@/components/ui/use-toast';
 import { useAppContext } from '@/contexts/AppContext';

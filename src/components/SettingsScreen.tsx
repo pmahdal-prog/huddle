@@ -3,7 +3,7 @@ import { useAppContext } from '@/contexts/AppContext';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
-import BLESettingsPanel from './BLESettingsPanel';
+
 import { useSubscription } from '@/hooks/useSubscription';
 import { TIER_LIMITS } from '@/lib/subscription-service';
 import { Badge } from '@/components/ui/badge';
@@ -79,7 +79,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({ onNavigate, isAdmin = f
           </div>
         </Card>
 
-        <BLESettingsPanel autoConnect={autoConnect} onAutoConnectChange={setAutoConnect} scanInterval={scanInterval} onScanIntervalChange={setScanInterval} signalThreshold={signalThreshold} onSignalThresholdChange={setSignalThreshold} />
+      
 
         <Card className="p-4">
           <Button variant="outline" className="w-full justify-start" onClick={() => onNavigate('pricing')}>
